@@ -1,0 +1,21 @@
+<div>
+    <ng-container *ngFor="let category of categories">
+        <!-- <p>ID :{{category._id}}</p> -->
+        <div class="characterInfo">
+            <h3>{{category.name}}</h3>
+            <h6>{{category.alias}}</h6>
+            <p>{{category.role}}</p>
+        </div>
+       
+        <p class="characterBrief">{{category.name}} <span *ngIf="category.role; else school"> is a {{category.role}} <span *ngIf="category.school"> at {{category.school}}</span></span>  . 
+            <ng-template #school>
+                <span *ngIf="category.school"> went to {{category.school}}</span>
+              </ng-template>
+            The house is {{category.house}}. The species is {{category.species}} and blood status is {{category.bloodStatus}}. <span *ngIf="category.alias">Wizards has given alias as {{category.alias}}. </span>
+             <span *ngIf="category.wand">{{category.wand}} is the wand used. </span> 
+             <span *ngIf="category.boggart"> The boggart is {{category.boggart}}. </span> 
+             <span *ngIf="category.patronus">The patronus is {{category.patronus}}. </span> 
+             <span *ngIf="category.dumbledoresArmy || category.orderOfThePhoenix || category.ministryOfMagic || category.deathEater"> {{category.name}} is <span *ngIf="category.dumbledoresArmy || category.orderOfThePhoenix || category.ministryOfMagic">part of <span *ngIf="category.dumbledoresArmy"> "Dumbledore Army" </span>  <span *ngIf="category.orderOfThePhoenix"> "Order Of The Pheonix" </span> <span *ngIf="category.ministryOfMagic"> "Ministry Of Magic" </span> </span>   <span  *ngIf="category.deathEater">a Death Eater</span>. </span> 
+            </p>
+    </ng-container>
+</div>

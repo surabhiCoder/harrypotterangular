@@ -1,0 +1,32 @@
+<div *ngFor="let house of showSortedHouseDetails">
+    <h2>Welcome to {{house.name}} Common Room</h2>
+    <div class="valuesColor"><h6>House Values : </h6><h4> <span *ngFor="let value of house.values"> {{value}},</span></h4></div>
+    <div class="valuesColor"><h6>House Color : </h6><h4> <span *ngFor="let color of house.colors"> {{color}},</span></h4></div>
+
+
+    <div class="mascot">
+        <h6>Mascot</h6>
+        <img src="assets/images/{{house.name}}_mascot.png" alt="">
+        <h4>{{house.mascot | uppercase}}</h4>
+    </div>
+    <ul class="houseLeaders clearfix">
+        <li><h6>Founder </h6><h4>{{house.founder}}</h4></li>
+        <li><h6>Head Of House </h6><h4>{{house.headOfHouse}}</h4></li>
+        <li><h6>House Ghost</h6> <h4>{{house.houseGhost}}</h4></li>
+        
+        
+    </ul>
+</div>
+
+
+<a href="javascript:void(0)" *ngIf="listOfHouses?.length" (click)=onShowMembers() class="primaryBtn {{sortedHouse.name}}">See members of {{sortedHouse.name}}</a>
+
+<div class="membersWrap"  *ngIf="showMembers">
+    <ul class="membersList">
+        <li *ngFor="let member of sortedHouseMembers">
+            <a href="javascript:void(0)" routerLink='/member/{{member.name}}' (click)="onClickCharacterId(member._id)">
+                {{member.name}}
+            </a>
+        </li>
+    </ul>
+</div>

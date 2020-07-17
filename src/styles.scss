@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/scss/variables';
+
+body{
+    font-family: $josefinFF;
+    color: $black;
+    margin: 0;
+    padding: 0;
+    background: #dcd8cf;
+}
+
+#wrapper{
+    padding: 20px;
+}
+
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    
+a{
+    color: $black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+h4{
+    font-size: 22px;
+    margin: 10px 0;
+}
+h6{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.clearfix{
+    clear: both;
+    &:before, &:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.houseLeaders{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    li{
+        float: left;
+        width: 33.33%;
+    }
+}
+
+a.greyBtn{
+    color: #f1c349;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #222;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.primaryBtn{
+    min-width: 200px;
+    background: #f1c349;
+    color: #222;
+    border-radius: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border: 1px solid #555;
+    text-align: center;
+    display: inline-block;
+}
+
+
+.Slytherin{
+    background:#1d7452 !important;
+    color: $white !important;
+}
+
+.Hufflepuff{
+    background:#fb9c28 !important;
+    color: $black !important;
+}
+
+.Ravenclaw{
+    background:#88b6d7 !important;
+    color: $black !important;
+}
+
+.Gryffindor{
+    background:#891015 !important;
+    color: $white !important;
+}
+
+.g_loader{
+    display: block!important;
+    background: #6e1e25;
+}
+.r_loader{
+    display: block!important;
+    background: #36538b;
+}
+.h_loader{
+    display: block!important;
+    background: #feb915;
+}
+.s_loader{
+    display: block!important;
+    background: #004e2b;
+}

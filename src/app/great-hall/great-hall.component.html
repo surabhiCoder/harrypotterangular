@@ -1,0 +1,15 @@
+<div class="greatHallWrap">
+    <img src="assets/images/hogwartsLogo.png" alt="" class="hogwartsLogo">
+    <h3>Welcome to the Wizardry World</h3>
+    <p>
+        Since it is your First year in the Hogwarts School of Witchcraft and Wizardry, You will be allotted a house by the Sorting Hat.
+    </p>
+
+
+    <a href="#" (click)="studentSorting()" class="primaryBtn sortingHatBtn">Know your House</a>
+
+    <div *ngIf="showCommonRoom">
+        <p class="housename">{{houseName}}</p>
+        <a routerLink='/commonroom/{{houseName}}' class="primaryBtn toCommonRoom {{houseName}}" (click)="goToCR()">lets go to {{houseName}} Common room</a>
+    </div>
+</div>

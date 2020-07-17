@@ -1,0 +1,14 @@
+<form>
+    <div class="searchBarWrap">
+        <input type="text" placeholder="Search for the spell" name="search" [(ngModel)]="search" class="searchBar" autocomplete="off">
+    </div>
+
+</form>
+
+<div class="spellListWrap">
+    <div class="spellList" *ngFor="let spell of listOfSpells | searchSpells: search">
+        <div><h6>Name : </h6> <h4> {{spell.spell | uppercase}}</h4></div>
+        <div><h6>Type : </h6> <h4> {{spell.type}}</h4></div>
+        <div><h6>Effect : </h6> <h4> {{spell.effect}}</h4></div>
+    </div>
+</div>

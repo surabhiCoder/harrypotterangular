@@ -1,0 +1,39 @@
+@import 'src/assets/scss/variables';
+.greatHallWrap{
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.hogwartsLogo{
+    width: 200px;
+}
+
+h3{
+    font-family: $berkshireFF;
+    font-size: 35px;
+}
+p{
+    font-size: 24px;;
+}
+
+.housename{
+    font-size: 100px;
+    padding: 20px 0 0;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+// .sortingHatBtn, .toCommonRoom{
+//     width: 200px;
+//     height: 60px;
+//     background: #6b63b5;
+//     color: $white;
+//     border-radius: 20px;
+//     padding: 15px 30px;
+//     text-decoration: none;
+// }
+
+.toCommonRoom{
+    font-weight: 800;
+}
